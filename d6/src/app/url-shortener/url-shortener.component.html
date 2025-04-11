@@ -1,0 +1,10 @@
+<div>
+    <input type="text" [(ngModel)]="customAlias" placeholder="Wpisz nazwę linku (wymagane)" required />
+    <input type="text" [(ngModel)]="originalUrl" placeholder="Wpisz oryginalny URL" required />
+    <button (click)="shortenUrl()">Skróć URL</button>
+  
+    <p *ngIf="shortenedUrl">
+      Skrócony URL:
+      <a [href]="getOriginalUrl(shortenedUrl)" target="_blank">{{ shortenedUrl }}</a>
+    </p>
+  </div>

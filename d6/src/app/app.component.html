@@ -1,0 +1,19 @@
+<div class="app-container">
+  <nav>
+    <button [routerLink]="['/']">Strona główna</button>
+    <button [routerLink]="['/login']" *ngIf="!isLoggedIn()">Zaloguj się</button>
+    <button [routerLink]="['/register']" *ngIf="!isLoggedIn()">Zarejestruj się</button>
+    <button [routerLink]="['/user-links']" *ngIf="isLoggedIn()">Moje linki</button>
+    <button [routerLink]="['/account-edit']" *ngIf="isLoggedIn()">Edytuj konto</button>
+    <button (click)="logout()" *ngIf="isLoggedIn()">Wyloguj się</button>
+    <div class="user-info" *ngIf="isLoggedIn()">
+      <span>Zalogowano jako: {{ currentUser?.username }}</span>
+      <img *ngIf="currentUser?.profileImage" [src]="currentUser.profileImage" alt="Profil" class="profile-icon" />
+    </div>
+    <button class="theme-toggle" (click)="toggleTheme()">
+      {{ isDarkMode ? 'Jasny motyw' : 'Ciemny motyw' }}
+    </button>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
