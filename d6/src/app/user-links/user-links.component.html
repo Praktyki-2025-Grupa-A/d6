@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Twoje linki</h2>
+    <div *ngIf="userLinks.length === 0" class="no-links">
+      Nie masz jeszcze żadnych linków.
+    </div>
+    <div *ngFor="let link of userLinks" class="link-item">
+      <p *ngIf="!link.editing"><strong>Nazwa:</strong> {{ link.shortId }}</p>
+      <p *ngIf="!link.editing"><strong>Skrócony URL:</strong> 
+        <a (click)="redirectToOriginalUrl(link.shortId)" [title]="link.url" target="_blank">{{ baseUrl + '/short.ly/' + link.shortId }}</a>
+      </p>
+      <div *ngIf="link.editing">
+        <strong>Nazwa:</strong>
+        <input [(ngModel)]="link.newShortId" placeholder="Nowa nazwa" required />
+        <strong>Oryginalny URL:</strong>
+        <input [(ngModel)]="link.newUrl" placeholder="Nowy URL" required />
+        <button class="save-btn" (click)="saveEdit(link)">Zapisz</button>
+        <button class="cancel-btn" (click)="cancelEdit(link)">Anuluj</button>
+      </div>
+      <p *ngIf="!link.editing"><strong>Oryginalny URL:</strong> {{ link.url }}</p>
+      <p><strong>Liczba otworzeń:</strong> {{ link.openings }}</p>
+      <h4>Lokalizacje:</h4>
+      <ul>
+        <li *ngFor="let loc of link.locations">
+          {{ loc.country }} - {{ loc.timestamp | date:'medium' }}
+        </li>
+      </ul>
+      <button class="copy-btn" (click)="copyUrl(link.shortId)">Kopiuj</button>
+      <button class="edit-btn" (click)="startEditing(link)" *ngIf="!link.editing">Edytuj</button>
+      <button class="delete-btn" (click)="deleteLink(link.shortId)">Usuń</button>
+    </div>
+    <p><a [routerLink]="['/']">Wróć do skracania URL-i</a></p>
+  </div>
