@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    .app-container, .container {
+      padding: 10px;
+      max-width: 100%;
+    }
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+    nav a {
+      margin: 10px 0;
+    }
+  }
+
+  :root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+    --button-text: #ffffff;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+
+  body.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --link-color: #66b3ff;
+    --link-hover-color: #99ccff;
+    --button-bg: #66b3ff;
+    --button-hover-bg: #99ccff;
+    --button-text: #1a1a1a;
+    --border-color: #444444;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;  
+  }
