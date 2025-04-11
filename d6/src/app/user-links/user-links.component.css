@@ -1,0 +1,141 @@
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.no-links {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.link-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.link-item:last-child {
+  border-bottom: none;
+}
+
+h4 {
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+  color: var(--text-color);
+}
+
+p {
+  margin: 5px 0;
+}
+
+a {
+  color: var(--link-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.copy-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.edit-btn {
+  background-color: #ffc107; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.save-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.save-btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.cancel-btn {
+  background-color: #6c757d; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+.delete-btn {
+  background-color: #dc3545; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+}
