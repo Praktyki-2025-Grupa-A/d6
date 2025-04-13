@@ -1,0 +1,14 @@
+<div class="edit-container">
+  <h2>Edytuj konto</h2>
+  <label>Nazwa użytkownika:</label>
+  <input type="text" [(ngModel)]="newUsername" placeholder="Nowa nazwa użytkownika" required />
+  <label>Hasło:</label>
+  <input type="password" [(ngModel)]="newPassword" placeholder="Nowe hasło" required />
+  <label>Ikonka profilowa (50x50px):</label> 
+  <input type="file" (change)="onFileChange($event)" accept="image/*" />
+  <div *ngIf="profileImage" class="preview">
+    <img [src]="profileImage" alt="Podgląd ikonki" />
+  </div>
+  <button (click)="saveChanges()">Zapisz zmiany</button>
+  <p><a [routerLink]="['/']">Wróć</a></p>
+</div>
