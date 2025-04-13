@@ -1,0 +1,58 @@
+.edit-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+h2 {
+  text-align: center;
+  color: var(--text-color);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.preview img {
+  width: 50px;  
+  height: 50px; 
+  border-radius: 50%;
+  object-fit: cover;
+}
