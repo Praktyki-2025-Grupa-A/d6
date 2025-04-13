@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Rejestracja</h2>
+    <form (ngSubmit)="register()">
+      <div>
+        <label>Login:</label>
+        <input class="custom-input" type="text" [(ngModel)]="username" name="username" required />
+      </div>
+      <div>
+        <label>Hasło:</label>
+        <input class="custom-input" type="password" [(ngModel)]="password" name="password" required />
+      </div>
+      <button type="submit">Zarejestruj</button>
+    </form>
+    <p>Masz konto? <a [routerLink]="['/login']">Zaloguj się</a></p>
+  </div>
